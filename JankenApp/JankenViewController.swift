@@ -7,17 +7,17 @@
 
 import UIKit
 
-class JankenViewController: UIViewController {
+final class JankenViewController: UIViewController {
     
-    @IBOutlet weak var jankenImageYou: UIImageView!
+    @IBOutlet private weak var jankenImageYou: UIImageView!
     
-    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet private weak var resultLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBAction func resultGu(_ sender: UIButton) {
+    @IBAction private func resultGu(_ sender: UIButton) {
         let n = arc4random() % 100 + 1; //乱数発生
         let gooImage = UIImage(named: "0")
         let chokiImage = UIImage(named: "1")
@@ -35,7 +35,7 @@ class JankenViewController: UIViewController {
         }
     }
     
-    @IBAction func resultChoki(_ sender: UIButton) {
+    @IBAction private func resultChoki(_ sender: UIButton) {
         let n = arc4random() % 100 + 1; //乱数発生
         let gooImage = UIImage(named: "0")
         let chokiImage = UIImage(named: "1")
@@ -53,7 +53,7 @@ class JankenViewController: UIViewController {
         }
     }
     
-    @IBAction func resultPa(_ sender: UIButton) {
+    @IBAction private func resultPa(_ sender: UIButton) {
         let n = arc4random() % 100 + 1; //乱数発生
         let gooImage = UIImage(named: "0")
         let chokiImage = UIImage(named: "1")
