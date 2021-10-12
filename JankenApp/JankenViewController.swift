@@ -22,9 +22,9 @@ final class JankenViewController: UIViewController {
         let plusNum = 1
         let randomNum = 100
         let n = Int(arc4random()) % randomNum + plusNum; //乱数発生
-        let gooImage = UIImage(named: "0")
-        let chokiImage = UIImage(named: "1")
-        let paaImage = UIImage(named: "2")
+        let gooImage = UIImage(named: "goo")
+        let chokiImage = UIImage(named: "choki")
+        let paaImage = UIImage(named: "paa")
         
         if( n % 3 == 0) { //グー
             resultLabel.text = "相手はグーでした。あいこです。";
@@ -40,9 +40,9 @@ final class JankenViewController: UIViewController {
     
     @IBAction private func resultChoki(_ sender: UIButton) {
         let n = arc4random() % 100 + 1; //乱数発生
-        let gooImage = UIImage(named: "0")
-        let chokiImage = UIImage(named: "1")
-        let paaImage = UIImage(named: "2")
+        let gooImage = UIImage(named: "goo")
+        let chokiImage = UIImage(named: "choki")
+        let paaImage = UIImage(named: "paa")
         
         if( n % 3 == 1) { //グー
             resultLabel.text = "相手はグーでした。あなたの負けです。";
@@ -58,9 +58,9 @@ final class JankenViewController: UIViewController {
     
     @IBAction private func resultPa(_ sender: UIButton) {
         let n = arc4random() % 100 + 1; //乱数発生
-        let gooImage = UIImage(named: "0")
-        let chokiImage = UIImage(named: "1")
-        let paaImage = UIImage(named: "2")
+        let gooImage = UIImage(named: "goo")
+        let chokiImage = UIImage(named: "choki")
+        let paaImage = UIImage(named: "paa")
         
         if( n % 3 == 1) { //グー
             resultLabel.text = "相手はチョキでした。あなたの負けです。";
