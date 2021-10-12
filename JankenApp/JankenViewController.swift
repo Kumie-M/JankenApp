@@ -18,7 +18,9 @@ final class JankenViewController: UIViewController {
     }
     
     @IBAction private func resultGu(_ sender: UIButton) {
-        let n = arc4random() % 100 + 1; //乱数発生
+        
+        let plusNum = 1
+        let n = Int(arc4random()) % 100 + plusNum; //乱数発生
         let gooImage = UIImage(named: "0")
         let chokiImage = UIImage(named: "1")
         let paaImage = UIImage(named: "2")
