@@ -7,21 +7,24 @@
 
 import UIKit
 
-class JankenViewController: UIViewController {
+final class JankenViewController: UIViewController {
     
-    @IBOutlet weak var jankenImageYou: UIImageView!
+    @IBOutlet private weak var jankenImageYou: UIImageView!
     
-    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet private weak var resultLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBAction func resultGu(_ sender: UIButton) {
-        let n = arc4random() % 100 + 1; //乱数発生
-        let gooImage = UIImage(named: "0")
-        let chokiImage = UIImage(named: "1")
-        let paaImage = UIImage(named: "2")
+    @IBAction private func resultGu(_ sender: UIButton) {
+        
+        let plusNum = 1
+        let randomNum = 100
+        let n = Int(arc4random()) % randomNum + plusNum; //乱数発生
+        let gooImage = UIImage(named: "goo")
+        let chokiImage = UIImage(named: "choki")
+        let paaImage = UIImage(named: "paa")
         
         if( n % 3 == 0) { //グー
             resultLabel.text = "相手はグーでした。あいこです。";
@@ -35,11 +38,11 @@ class JankenViewController: UIViewController {
         }
     }
     
-    @IBAction func resultChoki(_ sender: UIButton) {
+    @IBAction private func resultChoki(_ sender: UIButton) {
         let n = arc4random() % 100 + 1; //乱数発生
-        let gooImage = UIImage(named: "0")
-        let chokiImage = UIImage(named: "1")
-        let paaImage = UIImage(named: "2")
+        let gooImage = UIImage(named: "goo")
+        let chokiImage = UIImage(named: "choki")
+        let paaImage = UIImage(named: "paa")
         
         if( n % 3 == 1) { //グー
             resultLabel.text = "相手はグーでした。あなたの負けです。";
@@ -53,11 +56,11 @@ class JankenViewController: UIViewController {
         }
     }
     
-    @IBAction func resultPa(_ sender: UIButton) {
+    @IBAction private func resultPa(_ sender: UIButton) {
         let n = arc4random() % 100 + 1; //乱数発生
-        let gooImage = UIImage(named: "0")
-        let chokiImage = UIImage(named: "1")
-        let paaImage = UIImage(named: "2")
+        let gooImage = UIImage(named: "goo")
+        let chokiImage = UIImage(named: "choki")
+        let paaImage = UIImage(named: "paa")
         
         if( n % 3 == 1) { //グー
             resultLabel.text = "相手はチョキでした。あなたの負けです。";
